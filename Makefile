@@ -8,5 +8,8 @@ fmt:
 	isort .
 	$(black) .
 
+typecheck:
+	mypy .
+
 check:
 	python -m  pytest $(PYTEST_OPTIONS)
