@@ -5,6 +5,9 @@ autoflake := autoflake --in-place --recursive --remove-unused-variables --expand
 
 all: fmt typecheck check
 
+setup:
+	pipenv install --dev
+
 fmt:
 	$(autoflake) .
 	isort .
